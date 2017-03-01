@@ -1,0 +1,111 @@
+/* CSS Document */
+/**************************************
+ Filename: formPrototype.css
+ Author: Zachary Balda (ZDB)
+ Create Date: 21 Nov 2016
+ Purpose: Styling for GUI framework
+ Modification History:
+ Original Build
+**************************************/
+
+*{
+	margin:0 0 6px;
+}
+	
+	/* CSS from jQuery UI Theme index.html */
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	/* end theme css */
+
+header{
+	text-align:left;
+	color:white;
+	background-color:#134;
+	padding:30px 150px;
+}
+
+/*
+body {
+	background-color: #CCE0DF;
+}
+body p {
+	padding-left: 2em;
+}
+*/
+
+h2{
+	width: 100%;
+	color: #1E6E68;
+	line-height: 40px;
+}
+h3{
+	color: #1E6E68;
+	line-height: 30px;
+	text-align: center;
+}
+
+#main{ 
+	width: 800px;
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	min-height: 300px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+#output-area{ 
+	width: 800px;
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	min-height: 100px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+hr{ /* Define the formatting <hr> line elements */
+	margin: 10px 0;
+	width: 100%;
+	/* size: 600; <- was not an accepted value */
+	float: left;
+}
