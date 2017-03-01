@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<!--
+TITLE: Final Release
+AUTHOR: Zachary Balda (ZDB)
+PURPOSE: Complete final project
+NOTE: Based on template provided by instructor
+ORIGINALLY CREATED ON: 01/09/2013
+LAST MODIFIED ON: 1 Dec 2016
+LAST MODIFIED BY: Zachary Balda
+MODIFICATION HISTORY: 
+21 Nov 2016: Personalized (ZDB)
+21 Nov 2016: Added jQuery GUI widget tabs (ZDB)
+21 Nov 2016: Added jQuery GUI widget accordion (ZDB)
+21 Nov 2016: Added output area (ZDB)
+21 Nov 2016: Added GUI elements for Form Prototype (ZDB)
+25 Nov 2016: Personalized from formPrototype (ZDB)
+25 Nov 2016: Personalized from pullingThrough (ZDB)
+27 Nov 2016: Personalized from simpleFormValidation (ZDB)
+27 Nov 2016: Changed hours to recieve input (ZDB)
+27 Nov 2016: Included additional microsoft validation methods (ZDB)
+1 Dec 2016: Personalized form customFormValidation
+-->
+
+<html><head>
+
+<title>N341 Final Project - Final Release</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!-- self hosted custom jQuery UI theme CSS -->
+<link rel="stylesheet" type="text/css" href="resources/jquery-ui-1.12.1.custom/jquery-ui.css">
+
+<!-- style sheet for final project -->
+<link rel="stylesheet" type="text/css" href="css/final.css"> 
+
+<!-- google hosted jQuery library -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- google hosted jQuery UI library 
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+-->
+
+<!-- jQuery for theme -->
+<script src="resources/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+<!-- javaScript file for page -->
+<script type="text/javascript" src="javaScript/finalRelease.js"></script>
+
+<!-- jQuery validaiton plugin -->
+<script src="validation/dist/jquery.validate.js"></script>
+
+<!-- additional microsoft validation methods -->
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/additional-methods.js"></script>
+
+</head>
+
+
+<body>
+    <header>
+	<h1>CSCI N341 Final Project - Final Release</h1>
+	<p>By Zachary Balda</p>
+    </header>
+    
+    <br>
+    <div id="main">
+        <div id="menu">
+            <ul>
+                <li><a href="#tab-1">About Us</a></li>
+                <li><a href="#tab-2">What We Offer</a></li>
+                <li><a href="#tab-3">Our Team</a></li>
+                <li><a href="#tab-4">FAQ</a></li>
+                <li><a href="#tab-5">Get Help</a></li>
+            </ul>
+            <div id="tab-1"><p>About Us content.</p></div>
+            <div id="tab-2"><p>What We Offer content.</p></div>
+            <div id="tab-3"><p>Our Team content.</p></div>
+            <div id="tab-4">
+                <div id="faq">
+                    <h3>Question 1</h3>
+                    <div><p>answer 1</p></div>
+                    <h3>Question 2</h3>
+                    <div><p>answer 2</p></div>
+                    <h3>Question 3</h3>
+                    <div><p>answer 3</p></div>
+                    <h3>Question 4</h3>
+                    <div><p>answer 4</p></div>
+                    <h3>Question 5</h3>
+                    <div><p>answer 5</p></div>
+                    <h3>Question 6</h3>
+                    <div><p>answer 6</p></div>
+                </div>
+            </div>
+            <div id="tab-5">
+                <!-- Start of form -->
+                <h4>Need Help?</h4>
+                <p>Contact us and we'll be sure to get in touch.</p>
+                <br>
+
+                <form id="myForm">
+                <fieldset>
+                <legend>I am a: </legend>
+                <label for="radio-1">Freshman</label>
+                <input type="radio" name="radio-1" id="radio-1" value="Freshman">
+                <label for="radio-2">Sophomore</label>
+                <input type="radio" name="radio-1" id="radio-2" value="Sophomore">
+                <label for="radio-3">Junior</label>
+                <input type="radio" name="radio-1" id="radio-3" value="Junior">
+                <label for="radio-4">Senior</label>
+                <input type="radio" name="radio-1" id="radio-4" value="Senior">
+                <label for="radio-5">Other</label>
+                <input type="radio" name="radio-1" id="radio-5" value="Other">
+                </fieldset>
+                
+                <fieldset>
+                <legend>I need help with: </legend>
+                <label for="checkbox-1">Computer Science Mathematics</label>
+                <input type="checkbox" name="checkbox-1" id="checkbox-1"
+                value="Computer Science Mathematics">
+                <label for="checkbox-2">Object Oriented Programming</label>
+                <input type="checkbox" name="checkbox-2" id="checkbox-2"
+                value="Object Oriented Programming">
+                <label for="checkbox-3">Client Side Web Development</label>
+                <input type="checkbox" name="checkbox-3" id="checkbox-3"
+                value="Client Side Web Development">
+                <label for="checkbox-4">Server Side Web Development</label>
+                <input type="checkbox" name="checkbox-4" id="checkbox-4"
+                value="Server Side Web Development">
+                <label for="checkbox-5">Data Structures</label>
+                <input type="checkbox" name="checkbox-5" id="checkbox-5"
+                value="Data Structures">
+                </fieldset>
+                
+                <br>
+                
+                <div>
+                    <p id="hours">
+                        <label for="value">Prefered hours of tutoring / week:</label>
+                        <input type="text" name="value" id="value" readonly />
+                    </p>
+                    <div id="hours-range"></div>
+                </div>
+                <br>
+                <div id="date">
+                    <p>
+                        <label for="start">I would like to start being tutored:</label>
+                        <input type="text" name="start" id="start" />
+
+                </div>
+                
+                <br>
+                <div>
+                    <label for="univ">I attend (e.g. IUPUI): </label>
+                    <input name="univ" id="univ">
+                </div>
+
+                <br>
+                <hr>
+                <br>
+                
+                <div id="extraInput">
+                    <fieldset>
+                    <legend>Let us know about yourself:</legend>
+                    <div>
+                        <label for="firstName">*First Name: </label> 
+                        <input type="text" id="firstName" name="firstName"
+                        required="required" placeholder="First Name">
+                    </div><div>
+                        <label for="lastName">*Last Name: </label>
+                        <input type="text" id="lastName" name="lastName"
+                        required="required" placeholder="Last Name">
+                    </div><div>
+                        <label for="email">*Email: </label>
+                        <input type="email" id="email" name="email"
+                        required="required" placeholder="name@domain.com">
+                    </div><div>
+                        <label for="phoneNum">*Phone #: </label>
+                        <input type="tel" id="phoneNum" name="phoneNum"
+                        required="required" placeholder="333-333-4444">
+                    </div><div>
+                        <label for="password">*Password: </label> 
+                        <input type="password" id="password" name="password"
+                        required="required">
+                    </div>
+                    </fieldset>
+                </div>
+
+                <hr>
+                <br>
+
+                <div id="buttons">
+                    <button class="submit" id="submit" type="submit">Submit</button>
+                    <button type="button" id="reset">Reset</button>
+                </div>
+                </form>
+                
+                <!-- end of form -->
+            </div> <!-- end of tab 5 -->
+        </div>
+    </div>
+
+    <br>
+    
+    <!-- form output area -->
+    <div id="output-area">
+        <p>Output:</p>
+        <div id="output">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <a href="index.html">Back to Final Project Page</a>
+</body>
+</html>
